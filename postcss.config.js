@@ -3,31 +3,22 @@ const OUTDIR = ENV === 'production' ? 'docs' : 'dist'
 
 const config = {
   plugins: {
-    'postcss-import': {
-      /* options */
-    },
-    'immutable-css': {
-      /* options */
-    },
-    'postcss-nested': {
-      /* options */
-    },
-    'postcss-font-magician':{
-      /* options */
-    },
-    'postcss-cssnext': {
-      /* options */
-    },
-    'postcss-svgo': {
-      /* options */
-    },
-    'css-mqpacker': {
-      /* options */
-    },
+    'postcss-import':
+      { /* options */ },
+    'immutable-css':
+      { /* options */ },
+    'postcss-nested':
+      { /* options */ },
+    'postcss-font-magician':
+      { /* options */ },
+    'postcss-cssnext':
+      { /* options */ },
+    'postcss-svgo':
+      { /* options */ },
+    'css-mqpacker':
+      { /* options */ },
     'postcss-sorting': ENV === 'production'
-      ? {
-        /* options */
-      }
+      ? { /* options */ }
       : false,
     'postcss-uncss': ENV === 'production'
       ? {
@@ -35,18 +26,14 @@ const config = {
       }
       : false,
     'postcss-discard-comments': ENV === 'production'
-      ? {
-        /* options */
-      }
+      ? { /* options */ }
       : false,
     'postcss-reporter': {
       clearMessages: true, throwError: false,
     },
     'postcss-browser-reporter': ENV === 'production'
       ? false
-      : {
-        /* options */
-      },
+      : { /* options */ },
   },
 }
 

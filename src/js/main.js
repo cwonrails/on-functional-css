@@ -114,37 +114,21 @@ function focusOnSearchInput() {
     })
 }
 
-
 /**
  *
  */
 
-function closeIntro() {
-  let isOpen = true
-  document.querySelector('#intro-content .--closer')
-    .addEventListener('click', () => {
-      document.querySelector('main').classList.toggle('blur')
-      document.querySelector('#intro').classList.toggle('hide')
+document.querySelectorAll('.intro-toggle')
+  .forEach(elem => {
+    elem.addEventListener('click', () => {
+      document.querySelector('main').classList.toggle('blur',
+        window.currentTarget === document.querySelector('#intro'))
     })
-}
-
-function toggleIntro() {
-  const element = document.querySelector('#intro-toggle')
-  const introduction = document.querySelector('#intro')
-  const main = document.querySelector('main')
-
-  const toggleBlur = elem => {
-    elem.classList.toggle('blur')
-  }
-  const toggleHide = elem => {
-    elem.classList.toggle('hide')
-  }
-
-  element.addEventListener('click', () => {
-    toggleBlur(main)
-    toggleHide(intro)
   })
-}
+
+
+
+
 
 /**
  * Execute all functions from init
@@ -156,8 +140,6 @@ const init = () => {
   metabarToggling()
   focusOnSearchInput()
   headerPinUnpin()
-  closeIntro()
-  toggleIntro()
 }
 
 /**

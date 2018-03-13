@@ -10,32 +10,26 @@
   font-family : var(--font-mono);
   top         : 50%;
   left        : 50%;
-  transform   : translate(-50%, -50%);
   width       : 800px;
   max-width   : 100%;
   height      : 625px;
   max-height  : 90%;
-  will-change : transform;
-  transition  : all 0.5s ease;
-
+  transform   : translate(100%, -50%);
+  transition  : transform 0.5s ease-in-out;
 }
 
-/* #intro:target {
+#intro:target {
   transform   : translate(-50%, -50%);
-  will-change : transform;
-  transition  : transform 0.25s ease-in-out;
-  opacity     : 1;
-  filter      : unset;
-} */
+  transition  : transform 0.5s ease-in-out;
+}
 
 main {
-  transition : filter 0.4s ease;
+  transition : filter 0.5s ease;
 }
 
 .hide {
   transform  : translate(-50%, 100%);
   opacity    : 0;
-
 }
 
 .blur {
@@ -58,7 +52,7 @@ header {
 }
 
 #upgrade {
-  transition : .2s ease-in-out;
+  transition : .3s ease-in-out;
 }
 
 #upgrade:hover {
